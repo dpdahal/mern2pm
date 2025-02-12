@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #result{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+        }
+        div img{
+            width: 100%;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="result"></div>
+    
+
+    <script>
+        function getNews(){
+            let url ="https://newsapi.org/v2/everything?q=tesla&from=2025-01-06&sortBy=publishedAt&apiKey=ca3206dc1298409fb3560250bcce05d1";
+            fetch(url).then((res)=>{
+                return res.json();
+            }).then((data)=>{
+               let outPut="";
+               data.articles.map((news)=>{
+                     outPut+=`
+                     <div>
+                     <h1>${news.title}</h1>
+                     <p>${news.description}</p>
+                     <img src="${news.urlToImage}" alt="news image">
+                     </div>
+                     `
+               })
+               document.getElementById("result").innerHTML=outPut;
+               
+            })
+        }
+
+        getNews()
+    </script>
+</body>
+</html>

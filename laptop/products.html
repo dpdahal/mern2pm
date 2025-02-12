@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <blockquote>
+        <h1>Product List</h1>
+        <div id="result"></div>
+    </blockquote>
+
+    <script>
+        let products = [
+            { cid: 1, pid: 1, name: 'iphone' },
+            { cid: 1, pid: 2, name: 'samsung' },
+            { cid: 2, pid: 3, name: 'hp' },
+            { cid: 2, pid: 4, name: 'dell' }
+        ]
+
+        function showProducts() {
+            let getId = localStorage.getItem('productId');
+            let outPut='';
+            for(let x=0;x<products.length;x++){
+                if(products[x].pid == getId){
+                    outPut +=`<div>
+                    <h1>${products[x].name}</h1>
+                    <button onclick="gotoProduct()">Buy</button>  
+                    </div>`
+                }
+            }
+
+            document.getElementById('result').innerHTML = outPut;
+        
+        }
+
+        showProducts();
+    </script>
+</body>
+
+</html>

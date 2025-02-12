@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <blockquote>
+        <h1>Date and Time</h1>
+        <div id="result"></div>
+    </blockquote>
+
+    <script>
+        //let dd = new Date();
+        // console.log(dd.getFullYear());
+        // console.log(dd.toLocaleTimeString());
+        //let tm = dd.toLocaleTimeString();
+        //document.getElementById("result").innerHTML = tm; 
+
+        let jobs = [
+            { title: 'JavaScript Developer', exp_date: '2025-02-06'},
+            { title: 'Python Developer', exp_date: '2024-05-10'},
+            { title: 'UI/UX', exp_date: '2026-05-10'},
+            { title: 'Java', exp_date: '2025-11-25'},
+        ]
+        let date = new Date();
+
+        for(let x=0;x<jobs.length;x++){
+            let exp_date = jobs[x].exp_date;
+            let new_date = new Date(exp_date);
+            if(date > new_date){
+                console.log(jobs[x].title + ' is expired');
+            }else{
+                console.log(jobs[x].title + ' is not expired');
+            }
+        }
+
+    </script>
+</body>
+
+</html>

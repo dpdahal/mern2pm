@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <blockquote>
+        <h1>JavaScript</h1>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, repudiandae quis. Saepe fugit eaque non aliquam, et doloremque nam dolore nesciunt, pariatur blanditiis omnis eum illum cumque similique fugiat cum!
+        </p>
+        <h1>PHP</h1>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, repudiandae quis. Saepe fugit eaque non aliquam, et doloremque nam dolore nesciunt, pariatur blanditiis omnis eum illum cumque similique fugiat cum!
+        </p>
+        <h1>Mysql</h1>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, repudiandae quis. Saepe fugit eaque non aliquam, et doloremque nam dolore nesciunt, pariatur blanditiis omnis eum illum cumque similique fugiat cum!
+        </p>
+        <br><br>
+        <button onclick="logout()">Logout</button>
+    </blockquote>
+    <script>
+        let username =localStorage.getItem('username');
+        let password =localStorage.getItem('password');
+        if(username == null || password == null){
+            window.location.href = 'index.html';
+        }
+
+
+
+        function logout(){
+            localStorage.clear();
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

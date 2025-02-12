@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <blockquote>
+        <h1>Products Calculator</h1>
+        <hr>
+        Name: <input type="text" id="name"> <br><br>
+        Price: <input type="text" id="price"> <br><br>
+        Quantity: <input type="text" id="quantity"> <br><br>
+        <button onclick="calculate()">Calculate</button> <br><br> <br>
+       <div id="result"></div>
+       
+    </blockquote>
+    
+   <script>
+    function calculate(){
+        let name =document.getElementById('name').value;
+        let price = document.getElementById('price').value;
+        let quantity = document.getElementById('quantity').value;
+        let result =`<h1>The total price of 
+            ${name} is 
+            ${price * 
+            quantity}</h1>`;
+        document.getElementById('result').innerHTML =result
+    }
+   </script>
+
+</body>
+</html>
