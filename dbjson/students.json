@@ -1,0 +1,28 @@
+{
+  "studentsData": [
+    {
+      "id": 1,
+      "name": "ram",
+      "age": 25,
+      "city": "kathmandu"
+    },
+    {
+      "id": 2,
+      "name": "hari",
+      "age": 25,
+      "city": "pokhara"
+    },
+    {
+      "id": "a5c6",
+      "name": "Blythe Chavez",
+      "age": "93",
+      "city": "Asperiores pariatur"
+    },
+    {
+      "id": "d15f",
+      "name": "Honorato Oneil",
+      "age": "68",
+      "city": "A quis et distinctio"
+    }
+  ]
+}
